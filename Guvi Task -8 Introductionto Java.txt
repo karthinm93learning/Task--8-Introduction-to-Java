@@ -1,0 +1,261 @@
+Program -1
+/*1. Write a Java program that declares four integer variables: a, b, c, and d. 
+Then, write an if statement that checks whether the sum of a and b is greater than the sum of c and d. 
+If the condition is true, the program should output a message 
+indicating that the sum of a and b is greater than the sum of c and d. */
+
+		int num1,num2,num3,num4,r1, r2;
+		
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("Enter the Value of A:");
+		num1 = scanobj.nextInt();
+		System.out.println("Enter the Value of B:");
+		num2 = scanobj.nextInt();
+		System.out.println("Enter the Value of C:");
+		num3 = scanobj.nextInt();
+		System.out.println("Enter the Value of D:");
+		num4 = scanobj.nextInt();
+		
+		r1 = num1 + num2;
+		r2 = num3 + num4;
+		
+		if(r1 > r2)
+		{
+			System.out.println("The sum of a and b is greater");
+		}else
+		{
+			System.out.println("The sum of c and d is greater");
+		}
+	}
+}
+
+=========================================================================================
+Output:
+Enter the Value of A:
+25
+Enter the Value of B:
+50
+Enter the Value of C:
+75
+Enter the Value of D:
+100
+The sum of c and d is greater
+
+==========================================================================================
+Program -2
+//2. Have a variable store an integer. Create an if statement to find out if it’s an even number.Hint: Use operator %
+
+		int i;
+		
+		Scanner scanobj = new Scanner(System.in);
+		System.out.println("Enter the Number :");
+		i = scanobj.nextInt();
+		
+		if(i % 2 ==0)
+		{
+			System.out.println(i + " is a Even Number");
+		}
+		else
+		{
+			System.out.println(i + " is not a Even Number");
+		}
+	}
+}
+=========================================================================================
+Output:
+Enter the Number :
+15
+15 is not a Even Number
+=========================================================================================
+Program -3
+//3. Write a program to print the characters from A to Z.
+		
+		char i;
+		
+		 for(i = 'A' ; i <= 'Z'; i++)
+		 {
+			 System.out.print(i+" ");
+		 }	
+	}
+}
+=========================================================================================
+Output:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+=========================================================================================
+Program -4
+//Swapping two number 
+		
+		int a;
+		int b;
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("==================Before Swapping======================");
+		System.out.println("Enter the Value of A :");
+		a= scanobj.nextInt();
+		System.out.println("Enter the Value of B :");
+		b= scanobj.nextInt();
+		int temp;
+		
+		temp = a;
+		a = b;
+		b = temp;
+		
+		System.out.println("==================After Swapping======================");
+		System.out.println("The Value of A is "+a);
+		System.out.println("The Value of B is "+b);
+		
+	}
+}
+=========================================================================================
+Output:
+==================Before Swapping======================
+Enter the Value of A :
+15
+Enter the Value of B :
+20
+==================After Swapping======================
+The Value of A is 20
+The Value of B is 15
+
+=========================================================================================
+Program -5
+//5. Write a program to check if a number is prime or not.
+		
+		int num;
+		
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("Enter the number :");
+		num = scanobj.nextInt();
+		
+		for(int i = 2; i < num ; i++)
+		{
+			if(num % i == 0)
+			{
+				System.out.println(num + " is Not a Prime Number");
+				return;
+			}
+		}
+		System.out.println(num + " is a Prime Number");
+	}
+}
+=========================================================================================
+Output:
+Enter the number :
+13
+13 is a Prime Number
+
+=========================================================================================
+Program -6
+//6. Write a program to print the factorial of a given number.  For Ex: 5!=120
+		
+		int num, fact =1;// num = 3
+		
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("Enter the Number :");
+		num = scanobj.nextInt();
+		
+		for(int i=1; i <= num ; i++)
+		{
+			fact = fact * i;
+		}
+		System.out.println(num +"! factorial is " +fact);
+	}
+}
+=========================================================================================
+Output:
+Enter the Number :
+5
+5! factorial is 120
+=========================================================================================
+Program -7
+//7. Write a program to print the length of the given string. String msg = ”Guvi Geek”;
+		
+		String a = "Guvi Geek";
+		
+		System.out.println("Length of given String is "+a.length());	
+	}
+}
+=========================================================================================
+Output:
+Length of given String is 9
+=========================================================================================
+Program -8
+//8. Write a program To print “Welcome to Guvi” 10 times.
+		
+		int num;
+		
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("Enter no of times need to Print :");
+		num = scanobj.nextInt();
+		
+		for(int i= 1; i<=num; i++)
+		{
+			System.out.println("Welcome to Guvi");
+		}
+	}
+}
+=========================================================================================
+Output:
+Enter no of times need to Print :
+10
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+Welcome to Guvi
+=========================================================================================
+Program -9
+//9. Write a program to check whether the person is a senior citizen or not.
+		
+		int age;
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("Enter your Age :");
+		age = scanobj.nextInt();
+		
+		if(age >= 60)
+		{
+			System.out.println("You are Senior Citizen");
+		}else
+		{
+			System.out.println("You are Not Senior Citizen");
+		}	
+	}
+}
+=========================================================================================
+Output:
+Enter your Age :
+10
+You are Not Senior Citizen
+=========================================================================================
+Program -10
+//10. I). Write a program to Count Number of Digits in an Integer.
+		
+		Scanner scanobj = new Scanner(System.in);
+		System.out.println("Enter the Number :");
+		int num = scanobj.nextInt();
+		int count=0;
+		//123 =0
+		while(num!=0)
+		{//123
+			num /= 10;
+		    ++count;
+			
+		}
+		System.out.println("Count of the given integer is "+count);	
+	}
+}
+=========================================================================================
+Output:
+Enter the Number :
+12345
+Count of the given integer is 5
